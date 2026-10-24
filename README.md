@@ -204,12 +204,3 @@ Open `http://localhost:3000`.
 
 ---
 
-## Design Decisions
-
-**Discriminated union validation** — The backend uses a single Zod discriminated union schema keyed on `category`. This means one `safeParse` call validates the entire payload including category-specific `details`, rather than branching before validation.
-
-**Cross-collection fetching** — Requirements are stored in three separate MongoDB collections (one per category). The `GET /requirements` endpoint fetches from all three in parallel and merges the results, preserving category identity via the `category` field on each document.
-
-**Proxy over CORS** — Rather than configuring CORS headers on the backend, the frontend uses Next.js `rewrites` to forward API calls server-side. The browser only ever talks to one origin.
-
-**Client-side validation mirrors Zod** — The registration form validates all required fields client-side before making any network request. The rules match the backend Zod schema exactly (positive numbers, non-empty arrays, HH:mm time format), so a 400 from the backend should never occur under normal use.
