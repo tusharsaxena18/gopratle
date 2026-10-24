@@ -1,6 +1,6 @@
 import { Category, EventType } from "./types";
 
-export const API = "/api";
+export const API = process.env.NEXT_PUBLIC_API_URL ?? "/api";
 
 export const EVENT_TYPES: EventType[] = [
   "wedding",
