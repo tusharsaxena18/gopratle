@@ -2,6 +2,9 @@
 
 A full-stack requirement posting and browsing application built with Next.js, Node.js, Express, and MongoDB. Users can post event requirements across three professional categories — planner, performer, and crew — and browse all submissions in a filterable card view.
 
+Deployed Links: 
+- frontend -> https://gopratle-opal.vercel.app/
+- backend -> https://gopratle-u3pj.onrender.com/
 ---
 
 ## Assignment Brief
