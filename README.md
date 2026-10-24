@@ -27,7 +27,6 @@ On submission, data is validated, saved to MongoDB, and categorised under the se
 | Backend | Node.js, Express, TypeScript |
 | Database | MongoDB via Mongoose |
 | Validation | Zod (backend schema validation) |
-| Proxy | Next.js rewrites (eliminates CORS) |
 
 ---
 

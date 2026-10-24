@@ -7,6 +7,10 @@ import { getRequirements, getRequirementById } from "../services/requirements";
 
 const router = Router();
 
+router.get("/health", async (req: Request, res: Response) => {
+  res.send("works!")
+});
+
 router.post("/register/planner", async (req: Request, res: Response) => {
   const result = requirementSchema.safeParse({ ...req.body, category: "planner" });
   if (!result.success) {
