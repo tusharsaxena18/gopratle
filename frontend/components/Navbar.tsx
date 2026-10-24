@@ -18,12 +18,6 @@ export default function Navbar({ onRegisterClick }: NavbarProps) {
         </div>
 
         <div className="flex items-center gap-2">
-          <button className="px-4 py-2 rounded-lg text-sm font-medium text-orange-500 border border-orange-400 hover:bg-orange-50 transition-colors">
-            Login
-          </button>
-          <button className="px-4 py-2 rounded-lg text-sm font-medium text-orange-500 border border-orange-400 hover:bg-orange-50 transition-colors">
-            Join
-          </button>
           <button
             id="open-register-modal-btn"
             onClick={onRegisterClick}

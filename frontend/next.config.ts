@@ -4,7 +4,7 @@ import { resolve } from "path";
 
 // Load .env.local manually — Turbopack evaluates next.config.ts before Next.js
 // populates process.env from .env files, so BACKEND_URL would otherwise be undefined.
-const envPath = resolve(process.cwd(), ".env.local");
+const envPath = resolve(process.cwd(), ".env");
 if (existsSync(envPath)) {
   for (const line of readFileSync(envPath, "utf-8").split(/\r?\n/)) {
     const match = line.match(/^([A-Z][A-Z0-9_]*)=(.+)$/);
